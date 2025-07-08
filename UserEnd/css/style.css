@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("./phone.css");
+
+:root {
+    --basic: "Basic", sans-serif;
+    --roboto: "Roboto", sans-serif;
+    --Krub: "Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui --Krub:"Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui;
+    --primary-color: rgb(44, 120, 115);
+    --secondary-color: #004445;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    height: auto;
+    -ms-overflow-style: none; 
+}
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.homePage {
+    width: 100vw;
+    position: relative;
+    padding-bottom: 0vw ;
+    height: 100vh;
+}
+
+.brocali-image {
+    position: absolute;
+    z-index: 10;
+    rotate: 21deg;
+    width: 20vw;
+    left: -1%;
+    top: 14%;
+    opacity: 0.4;
+
+}
+
+.carrot-image {
+    position: absolute;
+    z-index: 10;
+    rotate: -41deg;
+    width: 20vw;
+    left: 20%;
+    opacity: 0.4;
+    top: -5%;
+}
+
+
+
+.star-image {
+    width: 67%;
+    position: absolute;
+    top: -17%;
+    left: -17%;
+}
+
+
+/* Logo Css */
+.logo {
+    position: relative;
+    display: inline;
+}
+
+.messi-mess-logo {
+    display: inline;
+    position: relative;
+}
+
+.messi-logo,
+.mess-logo {
+    display: inline;
+}
+
+.letter-logo {
+    font-family: var(--Krub);
+    font-size: 1.5vw;
+    z-index: 19;
+    font-weight: 500;
+    position: relative;
+    color: yellow;
+    font-weight: 600;
+
+}
+
+.f-s-logo,
+.s-s-logo {
+    color: white !important;
+    color: white;
+}
+
+.i-logo {
+    left: -0.45vw;
+}
+
+.s-s-logo {
+    color: white;
+    left: -0.45vw;
+}
+
+.mess-logo {
+    left: -0.45vw;
+    position: relative;
+}
+
+/* Navbar style */
+.navbar {
+    position: relative; 
+    font-family: auto;
+    font-size: 1vw;
+    padding: 10px;
+    margin: 0.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarUl {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 10;
+}
+
+.navbarLi {
+    margin: 5px 5px;
+}
+.hamburger-menu{
+    display: none;
+}
+.cross{
+    display: none;
+}
+/* .navbarLi:hover{
+    color: white !important;
+    box-shadow: 5px 5px 5px #012929;
+} */
+.navbarLi>a {
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+    font-family: var(--roboto);
+    font-weight: 500;
+    padding: 10px 16px;
+    font-size: 1.3vw;
+}
+.navbarLi:hover a{
+    color: white !important;
+    border-radius: 190px;
+    background-color: var(--secondary-color);
+    padding: 10px 16px;
+}
+.Home{
+    color: white !important;
+}
+.Home a{
+  
+}
+/* images CSS */
+
+
+
+.thali-image {
+    width: 47vw;
+    position: relative;
+    z-index: 9;
+    bottom: 0vw;
+    left: 3vw;
+}
+
+
+
+.elipse-container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    min-height: 100vh;
+    min-width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+.elipse-image {
+    width: 45vw;
+    position: relative;
+    z-index: 8;
+    transform: translate(-66%, 3%);
+
+}
+/* text and thali container css */
+.text-and-thali-container{
+    display: flex;
+}
+/* messi-mess CSS */
+.text {
+    position: relative;
+    top: 6vw;
+    z-index: 10;
+    left: 1%;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+
+}
+
+.messi-mess {
+    position: relative;
+    position: relative;
+}
+
+.messi,
+.mess {
+    display: inline;
+}
+
+.messi span,
+.mess span{
+    line-height: 7vw;
+}
+.letter {
+    font-family: var(--Krub);
+    font-weight: var(--Krub-style);
+    font-size: 8vw;
+    z-index: 19;
+    font-weight: 500;
+    position: relative;
+
+}
+
+.f-s,
+.s-s {
+    color: white !important;
+}
+
+.i {
+    left: -3vw;
+}
+
+.s-s {
+    left: -3vw;
+}
+
+.mess {
+
+    left: -3vw;
+    position: relative;
+}
+
+.quote {
+    color: white;
+    font-size: 2.5vw;
+    font-family: var(--Aver);
+    left: 0.5%;
+    line-height: 2.5vw;
+}
+
+.description {
+    position: relative;
+    z-index: 20;
+    color: white;
+    font-size: 1.1vw;
+    width: 50vw;
+    left: 0.5vw;
+    top: 0.5vw;
+    font-family: var(--basic);
+}
+
+/* food item pics css */
+.food-items-pics {
+    z-index: 20;
+    display: flex;
+    top: 31vw;
+
+    justify-content: space-around;
+    align-items: center;
+    width: 42vw;
+
+}
+
+.item {}
+
+.item>img {
+    width: 12vw;
+    z-index: 12;
+}
+
+.item-2>img {
+    width: 11vw !important;
+
+}
+
+/* Border Style */
+.yelBorder{
+    background-color: yellow;
+    height: 50px;
+    position: relative;
+    top: 5%;
+}
+
+/* order section */
+/* utitiliy Classse */
+.active {
+    color: black !important;
+}
+
+.logo-text {
+    position: relative;
+    z-index: 15;
+}
+
+.letter {
+    color: yellow;
+}
+.invisible{
+    display: none !important;
+}

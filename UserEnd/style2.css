@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700&display=swap');
+
+:root {
+    --basic: "Basic", sans-serif;
+    --roboto: "Roboto", sans-serif;
+    --Krub: "Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2C7873;
+    font-size: 16px;
+    font-family: var(--roboto);
+}
+
+.homePage {
+    overflow: visible;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+}
+
+/* Logo CSS */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 2vw;
+}
+
+.messi-mess-logo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.letter-logo {
+    font-family: var(--Krub);
+    font-size: 3vw;
+    z-index: 19;
+    font-weight: 600;
+    color: yellow;
+}
+
+.f-s-logo,
+.s-s-logo {
+    color: white !important;
+}
+
+.i-logo {
+    margin-left: -0.3vw;
+}
+
+/* Navbar style */
+.navbar {
+    position: absolute;
+    z-index: 20;
+    font-family: auto;
+    right: 2vw;
+    font-size: 1vw;
+    padding: 10px;
+    top: 20px;
+}
+
+.navbarUl {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbarLi {
+    margin: 5px 15px;
+}
+
+.navbarLi>a {
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+    font-family: var(--roboto);
+    font-weight: 500;
+    padding: 10px 15px;
+    font-size: 1.2vw;
+}
+
+/* images CSS */
+.brocali-image,
+.carrot-image,
+.star-image,
+.thali-image,
+.elipse-image {
+    position: absolute;
+    opacity: 0.4;
+    max-width: 100%;
+    height: auto;
+}
+
+.brocali-image {
+    rotate: 21deg;
+    width: 15vw;
+    left: -1%;
+    top: 35%;
+}
+
+.carrot-image {
+    rotate: -41deg;
+    width: 15vw;
+    left: 22%;
+}
+
+.star-image {
+    width: 40%;
+    top: -10%;
+    left: -10%;
+    z-index: 8;
+}
+
+.thali-image {
+    width: 35%;
+    left: 50%;
+    top: 15%;
+    z-index: 9;
+}
+
+.elipse-image {
+    width: 50%;
+    top: 30%;
+    left: 50%;
+    z-index: 8;
+}
+
+/* messi-mess CSS */
+.text {
+    position: relative;
+    top: 20%;
+    z-index: 20;
+    left: 2%;
+}
+
+.messi-mess {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.letter {
+    font-family: var(--Krub);
+    font-weight: var(--Krub-style);
+    font-size: 7vw;
+    font-weight: 500;
+    color: yellow;
+}
+
+.f-s,
+.s-s {
+    color: white !important;
+}
+
+.i {
+    margin-left: -3vw;
+}
+
+.s-s {
+    margin-left: -3vw;
+}
+
+.quote {
+    color: white;
+    font-size: 2.2vw;
+    font-family: var(--Aver);
+    position: absolute;
+    bottom: 24%;
+    left: 0.5%;
+}
+
+.description {
+    position: relative;
+    z-index: 20;
+    color: white;
+    font-size: 1.1vw;
+    width: 90%;
+    left: 0.5vw;
+    top: 0.5vw;
+    font-family: var(--basic);
+}
+
+/* food item pics css */
+.food-items-pics {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 15vh;
+}
+
+.item {
+    flex: 1 1 20%;
+    margin: 10px;
+}
+
+.item>img {
+    width: 100%;
+    height: auto;
+    z-index: 12;
+}
+
+/* Utility Classes */
+.active {
+    color: black !important;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        font-size: 1.5rem;
+        padding: 0;
+        top: 5%;
+    }
+
+    .navbarUl {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbarLi>a {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    .text {
+        top: 25%;
+        left: 5%;
+    }
+
+    .letter {
+        font-size: 12vw;
+    }
+
+    .quote {
+        font-size: 4.5vw;
+        bottom: 15%;
+    }
+
+    .description {
+        font-size: 3vw;
+        top: 3vw;
+        width: 95%;
+    }
+
+    .food-items-pics {
+        margin-top: 20vh;
+    }
+
+    .item {
+        margin: 5px;
+    }
+
+    .thali-image {
+        width: 50%;
+    }
+
+    .elipse-image {
+        width: 60%;
+    }
+
+    .carrot-image,
+    .brocali-image {
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar {
+        top: 10%;
+    }
+
+    .text {
+        top: 30%;
+        left: 10%;
+    }
+
+    .letter {
+        font-size: 15vw;
+    }
+
+    .quote {
+        font-size: 5vw;
+        bottom: 10%;
+    }
+
+    .description {
+        font-size: 4vw;
+        top: 4vw;
+        width: 100%;
+    }
+
+    .food-items-pics {
+        margin-top: 25vh;
+    }
+
+    .item {
+        margin: 2px;
+    }
+
+    .thali-image {
+        width: 60%;
+    }
+
+    .elipse-image {
+        width: 70%;
+    }
+
+    .carrot-image,
+    .brocali-image {
+        width: 25vw;
+    }
+}

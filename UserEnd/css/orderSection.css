@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+:root {
+    --basic: "Basic", sans-serif;
+    --roboto: "Roboto", sans-serif;
+    --Krub: "Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui --Krub:"Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui;
+    --primary-color: rgb(44, 120, 115);
+    --secondary-color: #004445;
+}
+
+.orderSection {
+    background-color: var(--secondary-color);
+    position: relative;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    grid-template-columns: repeat(2, 1fr);
+    top: 5%;
+    margin: 50px;
+}
+
+.orderSection .order {
+    grid-column: 1/span 2;
+    color: white;
+    font-family: var(--roboto);
+    margin: 20px 30px;
+    font-size: 2rem;
+
+}
+
+/* item list */
+.orderSection .foodItemList {
+    padding: 0 0 0 20px;
+}
+
+.foodItemList .foodItem {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(255, 255, 255, 0.1);
+    padding: 8px 10px;
+    border-radius: 12px;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.foodItem .foodName {
+    color: white;
+    font-family: var(--roboto);
+    font-weight: 400;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.foodItem .foodItemPrice {
+    font-family: var(--roboto);
+    color: white;
+    font-size: 14px;
+    justify-self: center;
+
+}
+
+.foodItem .foodItemPrice span {
+    color: yellow;
+}
+
+.foodItem .addtoCartBtn {
+    background-color: var(--secondary-color);
+    outline: none;
+    border: none;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    justify-self: end;
+}
+
+
+
+
+/* added item Section */
+.orderSection .addedItems {
+    margin: 0 0 0 20px;
+}
+
+.addedItems .addedItem {
+
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255, 0.1);
+    align-items: center;
+    margin: 5px;
+    padding: 5px 10px ;
+    border-radius: 20px;
+}
+
+.addedItem .addedItemName {
+    color: white;
+    font-family: var(--roboto);
+    font-size: 14px;
+}
+
+.addedItem .removeBtn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    background-image: url("../images/icons/cross.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 5px;
+}
+
+
+
+/* Total Price section */
+
+.priceOfAddedItems{
+    grid-column: 2/span 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0 10px 10px 0;
+
+}
+.priceOfAddedItems .totalPriceBox{
+display: flex;
+width: 60%;
+justify-content: space-between;
+align-items: center;
+}
+.totalPriceBox .totalText,
+.totalPriceBox .totalPrice
+{
+color: white;
+font-family: var(--roboto);
+font-size: 15px;
+}
+.totalPriceBox .totalPrice span {
+ color: yellow;
+}
+
+
+.totalPriceBox .payBtn{
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}

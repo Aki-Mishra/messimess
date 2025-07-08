@@ -1,0 +1,273 @@
+@media screen and (max-width: 800px) {
+    :root {
+        --basic: "Basic", sans-serif;
+        --roboto: "Roboto", sans-serif;
+        --Krub: "Krub", sans-serif;
+        --Krub-style: italic;
+        --Aver: "Averia Libre", system-ui --Krub:"Krub", sans-serif;
+        --Krub-style: italic;
+        --Aver: "Averia Libre", system-ui;
+        --primary-color: rgb(44, 120, 115);
+        --secondary-color: #004445;
+    }
+   
+    .star-image{
+        width: 103%;
+        top: -8%;
+        left: -30%;
+        transform: rotate(0deg);
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        z-index: 20;
+        width: 100vw;
+    }
+
+    .navbar .logo {}
+
+    .navbar .logo .messi-mess-logo {}
+
+    .letter-logo {
+        font-size: 5.5vw;
+    }
+
+    .hamburger-icons {
+        display: flex;
+        justify-content: end;
+    }
+
+    .hamburger-menu,
+    .cross {
+        display: inline;
+        position: relative;
+        z-index: 10;
+        transition: all 0.2s ease;
+        /* right: 80px; */
+        height: 35px;
+    }
+
+    .hamburger-menu {
+        margin: 5px 10px;
+    }
+
+    .cross {
+        margin: 5px 10px;
+    }
+
+    .navbarUl {
+        grid-column: 1 /span 2;
+        grid-row: 2/span 6;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        top: 35px;
+        right: 100%;
+        transition: all 0.2s ease;
+        z-index: 200;
+    }
+
+
+
+    .navbarLi {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        background-color: var(--secondary-color);
+        border-top: 1px solid var(--primary-color);
+        border-left: none;
+        border-bottom: 1px solid var(--primary-color);
+        border-right: none;
+    }
+
+    .cross {}
+
+    /* .navbarLi:hover{
+        color: white !important;
+        box-shadow: 5px 5px 5px #012929;
+    } */
+    .navbarLi>a {
+        color: white;
+        font-size: 4.5vw;
+        ;
+    }
+
+    .navbarLi:hover a {
+        color: white !important;
+    }
+
+    .Home {
+        color: white !important;
+    }
+
+    .Home a {}
+
+    /* text and thsali container */
+    .text-and-thali-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+        transform: translate(0, 10%);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* messi-mess CSS */
+    .text {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 5fr;
+        top: -2%;
+        left: 0;
+        width: 100%;
+
+    }
+
+    .messi-mess {
+        display: none;
+        position: relative;
+    }
+
+    .messi,
+    .mess {
+        display: inline;
+    }
+
+    .messi span,
+    .mess span {
+        line-height: 7vw;
+    }
+
+    .letter {
+        font-family: var(--Krub);
+        font-weight: var(--Krub-style);
+        font-size: 8vw;
+        z-index: 19;
+        font-weight: 500;
+        position: relative;
+
+    }
+
+    .f-s,
+    .s-s {
+        color: white !important;
+    }
+
+    .i {
+        left: -3vw;
+    }
+
+    .s-s {
+        left: -3vw;
+    }
+
+    .mess {
+
+        left: -3vw;
+        position: relative;
+    }
+
+    .quote {
+        text-align: center;
+        grid-column: 1/span 5;
+
+        font-size: 5.5vw;
+    }
+
+    .description {
+        grid-column: 2 / span 5;
+        grid-row: 2 / span 2;
+        text-align: center;
+        font-size: 12px;
+        width: auto;
+        height: 100%;
+        transform: translateY(20%);
+        margin-right: 0.2rem;
+    }
+    
+
+    /* food item pics css */
+    .food-items-pics {
+        grid-column: 1 / span 1;
+        width: none;
+        width: 35vw;
+    }
+
+    .item {
+        width: 35vw;
+    }
+    .food-items-pics .item-1, .food-items-pics .item-2, .food-items-pics .item-3 {
+        display: none;
+    }
+    .item>img {
+        width: 45vw;
+        position: relative;
+        z-index: 12;
+        display: inline;
+        right: 20px;
+    }
+
+    .item-2>img {
+        width: 11vw !important;
+
+    }
+
+    .thali-image {
+        width: 60vw;
+    }
+
+    .elipse-image {
+        position: absolute;
+        transform: translate(-107%, -14%);
+        width: 37vw;
+    }
+    .yelBorder{
+        display: none;
+    }
+    
+
+    .active {
+        color: white !important;
+    }
+
+
+    /* utlity classes */
+    .right0 {
+        right: 0 !important;
+
+    }
+
+    .invisible {
+        display: none;
+    }
+}
+
+
+/* FOR ORDER SECTION */
+@media screen and (max-width:450px){
+
+    .homepage{
+        height: auto !important;
+    }
+
+}

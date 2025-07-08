@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --basic: "Basic", sans-serif;
+    --roboto: "Roboto", serif;
+    --Krub: "Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui --Krub:"Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui;
+    --neuton: "Neuton", serif;
+    --primary-color: rgb(44, 120, 115);
+    --secondary-color: #004445;
+    --ref : 100px;
+}
+#footer{
+    height: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns:1.2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    color: white;
+    font-family: var(--roboto);
+    padding: 30px;
+    padding-bottom: 0;
+}
+#footer div{
+    margin: 0 30px;
+}
+
+#footer ul{
+    list-style: none;
+}
+#footer ul .heading{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+#footer ul .item{
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+#footer a{
+    text-decoration: none;
+    color: white;
+}
+#placeToFill{
+    font-family: var(--neuton);
+    font-size: 45px;
+    text-align: center;
+
+}
+#contactInfo{
+}
+#contactInfo .address{
+
+}
+#contactInfo .address span{
+    font-weight: 600;
+}
+#contactInfo .address #address{
+    font-weight: 400 !important;
+    margin: 0 0 0 5px;
+}
+#quickLinks{}
+#termAndPolicy{}
+#credit{
+
+}
+.follow{
+    
+    grid-column: 1/span 5;
+}
+.follow hr{
+    color: white;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 15px auto;
+    margin-top: 0 !important;
+
+}
+.follow .followIcons{
+    display: flex;
+    margin: 30px 30px 0 30px !important;
+
+}
+.followIcons .followText{}
+.followIcons a{
+
+}
+.followIcons a i 
+{
+    height: 30px;
+    margin-left: 15px;
+}
+.followIcons #instagram{}
+.followIcons #twitter{}
+.followIcons #linkedin{}
+.allRightsReserved{
+    display: block;
+    text-align: center;
+    font-family: var(--roboto);
+    font-size: 12px;
+    position: relative;
+    bottom: 10%;
+}
+.bold{
+    font-weight: 600;
+}

@@ -1,0 +1,44 @@
+<canvas id="myChart" width="300px" height="300px"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Single Bar'], // Label for the single bar
+        datasets: [{
+            label: 'Data',
+            data: [700], // Your single data point
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1,
+            barThickness: 50, // Fixed bar width
+        }]
+    },
+    options: {
+        responsive: true,  // Keep chart responsive
+        scales: {
+            x: {
+                // Reduce the space around the bar by adjusting these two
+                categoryPercentage: 0.7, // Make the category container smaller
+                barPercentage: 1.0,      // Take up the full space inside the category
+                
+                // If you have more bars, this will add control over spacing between them
+                offset: true,           // This removes extra space by aligning bars properly
+            },
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    max: 800, // Max Y-axis value
+                    stepSize: 100,
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'top'
+            }
+        }
+    }
+});
+</script>

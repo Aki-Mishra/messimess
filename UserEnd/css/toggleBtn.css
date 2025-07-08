@@ -1,0 +1,60 @@
+        .toggle-btn {
+
+            border: 2px solid var(--primary-color);
+            /* height: 2.5vw; */
+            aspect-ratio: 2 / 1;
+            /* padding: 10px; */
+            transition: 0.5s;
+            border-radius: 150px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-btn.active {
+            background-color: var(--primary-color);
+        }
+
+        .toggle-btn.unactive {
+            background-color: #6D6D6D;
+        }
+
+        .toggle-btn.active .indicator {
+            background-color: yellow;
+        }
+
+        .toggle-btn.unactive .indicator {
+            background-color: #B0B0B0;
+        }
+
+        .toggle-btn span {
+            color: #ffff;
+            font-family: var(--basic);
+            position: relative;
+            transition: 0.3s;
+
+        }
+
+        .indicator {
+            aspect-ratio: 1 / 1;
+            position: absolute;
+            top: 0;
+            border-radius: 50%;
+            transform: scale(0.9);
+            transition: 0.5s;
+        }
+
+        .no {
+            left: 5px;
+        }
+
+
+
+        .unactive .indicator {
+            left: 0;
+        }
+
+        .invisible {
+            opacity: 0;
+            visibility: hidden;
+        }

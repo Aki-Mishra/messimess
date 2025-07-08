@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+        * ::after,
+        ::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-color: rgb(44, 120, 115);
+            --secondary-color: #004445;
+            --accent-color: yellow;
+            --lato: "Lato", system-ui;
+            --basic: "Basic", sans-serif;
+
+        }
+
+        body {
+            background-color: var(--primary-color);
+            margin: 0;
+            padding: 0;
+            overflow-y: hidden;
+            width: 100vw;
+            transition: all 1s ease;
+        }
+
+        #alert {
+            position: absolute;
+            top: 50px;
+            background-color: red;
+            width: 100%;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            font-size: 1.5rem;
+            font-family: var(--basic);
+            position: absolute;
+            top: 20px;
+            background-color: red;
+            width: 90%;
+            text-align: center;
+            color: white;
+            padding: 5px;
+            font-size: 1.3rem;
+            font-family: var(--basic);
+            z-index: 10;
+            display: block;
+            margin: auto;
+            left: 50%;
+            border-radius: 10px;
+            text-transform: capitalize;
+            transition: all 0.5s ease;
+        }
+
+        .unAlerted {
+            transform: translate(-50%, -60px);
+            opacity: 0;
+        }
+
+        .alerted {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+
+        .show-box {
+            overflow: hidden;
+            width: 100vw;
+        }
+
+        #login-and-sign-up-page-container {
+            display: flex;
+            width: 250vw;
+            position: relative;
+            transition: all 1s ease-in;
+        }
+
+        /* another page  go containers */
+
+        #request-account-page,
+        #login-page {
+            flex-shrink: 0;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        .go-to-login-container,
+        .go-to-request-account-page-container {
+            /* hie */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            height: auto;
+
+            grid-template-rows: 2;
+        }
+
+        .go-to-login-container {
+            grid-column: 1 / span 4;
+            width: 300px;
+            top: 71px;
+            left: 90px;
+
+        }
+
+        .go-to-login-container p,
+        .go-to-request-account-page-container P {
+            font-family: var(--lato);
+            color: white;
+            margin: 5px;
+            text-align: center;
+        }
+
+        #request-container-heading {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        #another-page-container-text {
+            font-family: var(--basic);
+            color: white;
+            margin: 0px 0 5px 0;
+            text-align: center;
+            line-height: 1.3rem;
+            font-size: 1rem;
+        }
+
+        #login-page-go-btn,
+        #request-page-go-btn {
+            outline: none;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 7px 20px;
+            margin: 6px;
+            border-radius: 150px;
+            font-family: var(--lato);
+            font-weight: 500;
+
+
+        }
+
+        /* image style */
+        #eating-pizza-image,
+        #eating-together-image {
+            position: absolute;
+            bottom: -10px;
+            grid-row: 2 / span 3;
+            z-index: -5;
+        }
+
+        #eating-pizza-image {
+            height: 500px;
+            left: 7vw;
+        }
+
+        .request-account-form-section {
+            grid-column: 5 / span 3;
+            display: inline;
+            grid-row: 1/ span 3;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .form-section {
+            position: absolute;
+            top: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .form-section p {
+            color: white;
+            font-family: var(--basic);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-image: url("./images/icons/secondary-color-user-icon.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .user-icon-colored {}
+
+        .form-heading {
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+
+        }
+
+        /*  form Section */
+        .form {
+            background-color: #d9d9d91a;
+            width: 31vw;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            border-radius: 20px;
+            flex-direction: column;
+        }
+
+        .input-field {
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+
+        .input-field img {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 2px;
+        }
+
+        .input-field input {
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            left: 0;
+            padding: 10px 0 6px 30px;
+            outline: none;
+            font-size: 1.2rem;
+            z-index: -5;
+            border: none;
+            position: relative;
+            background: transparent;
+            z-index: 9;
+            border-bottom: 2px solid #80CBC4;
+            font-family: var(--basic);
+            font-weight: 500;
+            transition: all 0.2s;
+            caret-color: white;
+            color: white;
+        }
+
+        /* Target autofilled input fields */
+        .input-field input:-webkit-autofill {
+            background-color: transparent
+                /* Change text color if needed */
+        }
+
+        /* Firefox-specific styling */
+        .input-field input:-moz-autofill {
+            background-color: transparent;
+            /* Change this color to your preferred background color */
+            /* Change text color if needed */
+        }
+
+        /* Standard styling */
+        .input-field input:autofill {
+            background-color: transparent;
+            /* Change text color if needed */
+        }
+
+        .label-text {
+            font-size: 1.2rem;
+            position: absolute;
+            left: 30px;
+            margin: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: var(--lato) !important;
+            transition: all 0.2s;
+            text-transform: capitalize;
+
+        }
+
+        .input-field input:focus {
+            border-bottom: 2px solid #00897B;
+        }
+
+        .input-field input:focus+.label-text,
+        .input-field input:not(:placeholder-shown)+.label-text {
+            transform: translate(-5px, -33px) scale(0.7);
+
+            left: 22px;
+            margin: 0;
+            color: #A7C4C2 !important;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            outline: none;
+            font-size: 1.3rem;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 20px;
+            position: relative;
+            box-sizing: border-box;
+
+        }
+
+        /* Elispse Style */
+        .elipse-container {
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            pointer-events: none;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .elipse {
+            height: 100vw;
+            width: 100vw;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            position: absolute;
+            top: -40vw;
+            z-index: -10;
+            transition: all 0.8s ease;
+        }
+
+        .elipse-request {
+            transform: translateX(40vw);
+        }
+
+        .elipse-login {
+            transform: translateX(-40vw);
+        }
+
+
+
+        /* filler Box */
+        .fillerBox {
+            flex-shrink: 0;
+            height: 100vh;
+            width: 50vw;
+            position: relative;
+        }
+
+        /* login-page-style */
+        .go-to-request-account-page-container {
+            grid-column: 5 / span 3;
+            grid-row: 1 / span 2;
+            width: 372px !important;
+            top: 131px;
+            left: 126px;
+        }
+
+        #eating-together-image {
+            height: 651px;
+            right: -1vw;
+
+        }
+
+        .login-account-form-section .form-section {
+            left: 9vw;
+        }
+
+        .invisible {
+            display: none !important;
+        }
+
+
+        .left--100 {
+            transform: translateX(-150vw);
+        }
+
+
+        @media (max-width: 1400px) {
+            body {
+                background-color: var(--secondary-color);
+            }
+
+            .elipse {
+                background-color: var(--primary-color);
+                height: 120vw;
+                width: 120vw;
+
+            }
+
+            .elipse-request {
+                left: 50%;
+                transform: translate(-50%, 108vw);
+            }
+
+            .elipse-login {
+                transform: translateX();
+            }
+        }
+
+        /* for phones */
+        @media (max-width: 800px) {
+            body {
+                background-color: var(--secondary-color);
+            }
+
+            .go-to-login-container {
+                grid-row: 3 / span 1;
+                left: 50%;
+
+            }
+
+            #eating-pizza-image {
+                display: none;
+            }
+
+            .request-account-form-section {
+                grid-row: 1 / span 2;
+                grid-column: 1 / span 7;
+            }
+
+            .form-section {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .form-heading {
+                font-size: 1.5rem;
+                margin: 0 0 7px 0;
+            }
+
+            .form {
+                width: 40vw;
+                background-color: #0d4a444d;
+            }
+
+            .elipse {
+                height: 140vw;
+                width: 140vw;
+                background-color: var(--primary-color);
+            }
+
+            .elipse-request {
+                left: 50%;
+                transform: translate(-50%, 20vw);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .go-to-login-container {
+                grid-row: 2 / span 1;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                top: 50%;
+                grid-column: 1 / span 7;
+            }
+
+            #request-container-heading {
+                font-size: 1.5rem;
+            }
+
+            #another-page-container-text {
+                width: 210px;
+                line-height: 1rem;
+                font-size: 0.7rem;
+            }
+
+            #login-page-go-btn,
+            #request-page-go-btn {
+                background-color: var(--primary-color);
+            }
+
+
+            .form-section {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 5vh;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                background-image: url("./images/icons/primary-color-user-imge.png");
+            }
+
+            .form {
+                padding: 15px 21px;
+                width: 60vw;
+            }
+
+            .input-field {
+                margin: 6px;
+
+            }
+
+            .input-field img {
+
+                width: 20px;
+            }
+
+            .input-field input {
+                margin: 5px 0;
+                font-size: 1rem;
+                padding: 6px 0 6px 30px;
+            }
+
+            .label-text {
+                font-size: 1rem;
+            }
+
+            .submit-btn {
+                font-size: 1rem;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unAlerted" id="alert">this is alert</div>
+    <div class="show-box">
+        <div id="login-and-sign-up-page-container">
+            <div id="request-account-page" class="">
+
+                <div class="go-to-login-container">
+                    <p id="request-container-heading">Here by mistake</p>
+                    <p id="another-page-container-text">Already a member? No need request a new Account again! Click
+                        below
+                        to
+                        log in and access your account</p>
+                    <button id="login-page-go-btn" class="login-page-go-btn">Login</button>
+                </div>
+                <img src="./images/meal-prefrences/eating-pizza.png" alt="" id="eating-pizza-image">
+                <div class="request-account-form-section">
+                    <div class="form-section">
+                        <div class="logo">
+                            <!-- <img class="user-icon-colored"
+                                src="./images//meal-prefrences/icons/secondary-color-user-icon.png" alt=""> -->
+
+                        </div>
+                        <p class="form-heading">Hello Friends</p>
+                        <form action="" class="form">
+                            <div class="input-field">
+                                <img src="./images/icons/user.png" alt="" class="icon-input-field">
+                                <input placeholder=" " elipse-animation="" id="requesting-user-name">
+                                <p class="label-text">Name</p>
+                            </div>
+                            <div class="input-field">
+                                <img src="./images/icons/door.png" alt="" class="icon-input-field">
+                                <input placeholder=" " type="number" name="" id="requesting-user-room-no">
+                                <p class="label-text">Room No</p>
+                            </div>
+                            <div class="input-field">
+                                <img src="./images/icons/smartPhone.png" alt="" class="icon-input-field">
+                                <input placeholder=" " type="" name="" id="requesting-user-mobile-no">
+                                <p class="label-text">Mobile No</p>
+                            </div>
+                            <button class="submit-btn" id="request-btn">Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="fillerBox"></div>
+
+            <div id="login-page">
+                <div class="go-to-request-account-page-container">
+                    <p id="request-container-heading">Doesn’t have a account </p>
+                    <p id="another-page-container-text">Request Warden for an account. Hostelers are only allowed for
+                        this service</p>
+                    <button id="request-page-go-btn" class="request-page-go-btn">Request</button>
+                </div>
+                <img src="./images/meal-prefrences/eatingToether.png" alt="" id="eating-together-image">
+                <div class="login-account-form-section">
+                    <div class="form-section">
+                        <div class="logo">
+                            <img class="user-icon-colored"
+                                src="./images//meal-prefrences/icons/secondary-color-user-icon.png" alt="">
+                        </div>
+                        <p class="form-heading">Hello Friends</p>
+                        <form action="" class="form">
+                            <div class="input-field">
+                                <img src="./images/meal-prefrences/icons/user.png" alt="" class="icon-input-field">
+                                <input placeholder=" " type="text" name="" id="user-name">
+                                <p class="label-text">Name</p>
+                            </div>
+                            <div class="input-field">
+                                <img src="./images/meal-prefrences/icons/password-icon.png" alt=""
+                                    class="icon-input-field">
+                                <input placeholder=" " type="password" name="" id="password">
+                                <p class="label-text">password</p>
+                            </div>
+
+                            <button id="submit-btn" class="submit-btn"> Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="elipse-container">
+        <div class="elipse elipse-request"></div>
+    </div>
+</body>
+<script>
+    const moveToLoginPageBtn = document.querySelector(".login-page-go-btn");
+    const loginAndSignUpPageContainer = document.querySelector("#login-and-sign-up-page-container");
+    const moveToRequestAccountPage = document.querySelector("#request-page-go-btn");
+    let requestingUserName = document.querySelector("#requesting-user-name")
+    let roomNo = document.querySelector("#requesting-user-room-no")
+    let mobileNo = document.querySelector("#requesting-user-mobile-no")
+    const requestBtn = document.querySelector("#request-btn");
+    const alertBox = document.querySelector("#alert");
+    const submitBtn = document.querySelector("#submit-btn")
+    // alert function
+    const callAlert = (msg, color) => {
+        alertBox.innerHTML = msg; // Set the alert message
+        alertBox.classList.add("alerted")
+        alertBox.classList.remove("unAlerted");
+        alertBox.setAttribute("style", `background-color: ${color};`);
+        setTimeout(() => {
+            console.log("hai")
+            alertBox.classList.remove("alerted")
+            alertBox.classList.add("unAlerted");
+        }, 1000)
+    }
+    // sliding page working
+    moveToRequestAccountPage.addEventListener("click", () => {
+        console.log("move to login page btn working")
+        setTimeout(() => {
+
+            loginAndSignUpPageContainer.classList.remove('left--100')
+        }, 800)
+        document.querySelector(".elipse").classList.add("elipse-request");
+        document.querySelector(".elipse").classList.remove("elipse-login");
+    })
+
+
+
+    // verifying user data
+    const verify = (location) => {
+        let requestingUserNameValue = requestingUserName.value
+        let roomNoValue = roomNo.value
+        let mobileNoValue = mobileNo.value
+        let userName = document.querySelector("#user-name").value
+        let password = document.querySelector("#password").value
+
+        if (location == "login") {
+            if (userName.length < 4) {
+                callAlert("There should a proper name", "red");
+            }
+            else if (password.length == 0) {
+                callAlert("Can not proceed without password", "red");
+            }
+            else {
+                return 1;
+            }
+
+        }
+        else if (location == "request-acccount") {
+            if (requestingUserNameValue.length < 4) {
+                callAlert("There should a proper name", "red");
+            }
+            else if (roomNoValue.length == 0) {
+                callAlert("Enter Ur Room No", "red");
+            }
+            else if (mobileNoValue.length < 10) {
+                callAlert("Enter Ur Mbile No", "red");
+            }
+            else {
+                return 1;
+            }
+
+        }
+    }
+    moveToLoginPageBtn.addEventListener("click", () => {
+        console.log("hai")
+        setTimeout(() => {
+
+            loginAndSignUpPageContainer.classList.add('left--100')
+        }, 800)
+        document.querySelector(".elipse").classList.remove("elipse-request");
+        document.querySelector(".elipse").classList.add("elipse-login");
+    })
+    // request for accont btb click working
+    requestBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        verify("request-acccount")
+    })
+    submitBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        let userName = document.querySelector("#user-name").value
+        let password = document.querySelector("#password").value
+
+        let location = "login"
+        let verification = verify(location)
+        const data = {
+            name: userName,
+            password: password
+        }
+        if (verification == 1) {
+
+            let response = await sendData(data, location)
+            console.log(response)
+        }
+    })
+
+    const sendData = (data, location) => {
+        let response = fetch(`http://localhost:6969/${location}`, {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: 'include' 
+        })
+        return response;
+    }
+
+</script>
+
+</html>

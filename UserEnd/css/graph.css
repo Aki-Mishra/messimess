@@ -1,0 +1,169 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --basic: "Basic", sans-serif;
+    --roboto: "Roboto", sans-serif;
+    --Krub: "Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui --Krub:"Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui;
+    --primary-color: rgb(44, 120, 115);
+    --secondary-color: #004445;
+    --breakfast-color: #F28482;
+    --lunch-color: #F6BD60;
+    --snack-color: #4FD6B5;
+    --dinner-color: #1DADD7;
+}
+
+
+
+.graph {
+    background-color: var(--primary-color);
+    padding: 5px 15px;
+    width: 75vw;
+    height: 420px;
+    display: flex;
+    margin: 20px;
+}
+
+.linesAndBars {
+    width: 80%;
+    position: relative;
+    height: 90%;
+}
+
+.lines {
+    width: calc(100% + 30px);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.lines>div {
+    height: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: end;
+}
+
+.lines>div>span {
+    position: relative;
+    color: #fff;
+    top: 0;
+    font-family: var(--roboto);
+    display: flex;
+    justify-content: end;
+    font-size: 14px;
+    width: 30px;
+    top: 30%;
+    margin-right: 10px;
+}
+
+.lines>div>div {
+    display: flex;
+    width: calc(100% + 30px);
+    flex-direction: row;
+    height: 1px;
+    border: transparent;
+    background-color: #fff;
+}
+
+/* for bars */
+.bars {
+    position: absolute;
+    top: 0;
+    display: flex;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    padding-top: 30px;
+    margin-left: 40px;
+    width: 100%;
+}
+
+.barAndItsName {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barBox {
+    height: calc(30px *8);
+    display: flex;
+    align-items: end;
+}
+
+.bar {
+    height: 100px;
+    width: 40px;
+    background-color: red;
+
+}
+
+.itemName {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+
+
+}
+
+.itemName p {
+    color: yellow;
+    font-weight: 500;
+    font-family: var(--roboto);
+    font-size: 14px;
+    transform: rotate(315deg);
+    position: relative;
+    right: 18px;
+}
+
+/* for labelNames */
+.labelIndicators {
+    width: 20%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    padding: 20px  0 0 50px;
+}
+
+.labelIndicators>div {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+    margin: 5px 0;
+}
+
+.labelIndicators>div>.labelBox {
+    height: 25px;
+    width: 25px;
+}
+
+.labelIndicators>div>p {
+    font-size: 14px;
+    font-family: var(--roboto);
+    color: #fff;
+}
+
+#breakfast {
+    background-color: var(--breakfast-color);
+}
+
+#lunch {
+    background-color: var(--lunch-color);
+}
+
+#snacks {
+    background-color: var(--snack-color);
+}
+
+#dinner {
+    background-color: var(--dinner-color);
+}

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Basic&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --basic: "Basic", sans-serif;
+    --roboto: "Roboto", serif;
+    --Krub: "Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui --Krub:"Krub", sans-serif;
+    --Krub-style: italic;
+    --Aver: "Averia Libre", system-ui;
+    --neuton: "Neuton", serif;
+    --primary-color: rgb(44, 120, 115);
+    --secondary-color: #004445;
+}
+
+body {
+    background-color: var(--primary-color);
+
+}
+
+.meal-prefrences {
+    position: relative;
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    background-color: var(--secondary-color);
+    top: 10vh;
+    padding: 2vw;
+}
+
+.heading-meal-prefrences {
+    font-family: var(--roboto);
+    font-size: 4.90vw;
+
+}
+
+.question {
+    font-family: var(--roboto);
+    font-size: 1.7vw;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.item {
+    font-size: 1.2vw;
+    font-family: var(--roboto);
+
+}
+
+.form {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 4fr 1fr;
+
+}
+
+.form-item {
+    padding: 10px;
+}
+
+.food-item-1 {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / span 2;
+}
+
+.food-item-1 p {
+    font-family: var(--basic);
+    color: white;
+    font-size: 1.7vw;
+}
+
+/* next-meal toggle btn */
+#next-meal-toggle {
+    height: 2.5vw;
+    padding: 10px;
+}
+
+#next-meal-toggle span {
+    font-size: 1.3vw;
+}
+
+#next-meal-toggle .indicator {
+    width: 2.2vw;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+#next-meal-toggle.active .indicator {
+    transform: translateX(1.8vw) scale(0.9);
+}
+
+#next-meal-toggle.unactive .indicator {
+    left: 0;
+}
+
+.form-item-2 {
+    padding: 20px 40px 20px 20px;
+    border: 2px solid #88C9C4;
+    border-radius: 10px;
+}
+
+.form-item-2>div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin: 0 0 12px 0;
+}
+.dish-sec{
+    transition: 0.5s;
+}
+
+.form-item-2 div p {
+    font-family: var(--basic);
+    color: white;
+    font-size: 1.3vw;
+    text-transform: capitalize;
+
+}
+
+.form-item-2 div .toggle-btn {
+    height: 1.5vw;
+    padding: 5px;
+}
+
+.form-item-2 div .toggle-btn span {
+    font-size: 0.8vw;
+}
+
+.form-item-2 div .toggle-btn .no {
+    left: 1px;
+}
+
+.form-item-2 div .toggle-btn .indicator {
+    height: 1.2vw;
+    transform: scale(0.9);
+}
+
+.form-item-2 div .toggle-btn.active .indicator {
+    transform: scale(0.9) translateX(1.3vw);
+}
+
+#chapati-input {
+    width: 3vw;
+padding: 5px;
+height: 1.5vw;
+border: 2px solid var(--primary-color);
+border-radius: 5px;
+font-weight: 600;
+color: #2f2f2f;
+text-align: center;
+outline: none;
+background-color: #E0E0E0;
+}
+#chapati-input::-webkit-outer-spin-button,
+#chapati-input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+#chapati-input::-webkit-input-placeholder {
+color: #B0B0B0; /* Chrome, Safari, Opera */
+}
+
+
+#chapati-input::-moz-placeholder {
+color: #B0B0B0; /* Firefox 19+ */
+}
+
+
+#chapati-input::-ms-input-placeholder {
+color: #B0B0B0; /* Internet Explorer 10+ */
+}
+
+
+#chapati-input::-ms-input-placeholder {
+color: #B0B0B0; /* Microsoft Edge */
+}
+
+
+#chapati-input::placeholder {
+color: #888; /* Standard */
+}
+
+.form-item-3 {
+    padding: 10px 30px 0 30px;
+}
+
+.form-item-3>span {
+    color: #ffff;
+    font-family: var(--basic);
+    font-size: 1.3vw;
+}
+
+#small-text {
+    font-size: 0.6vw;
+    position: relative;
+    bottom: 0.3vw;
+}
+
+.form-item-3>span i {
+    color: #ff0000;
+    font-family: var(--basic);
+}
+
+
+.orders {
+    height: 13vw;
+    margin: 5px 0 0 0;
+    border-radius: 15px;
+    border: 2px solid #88C9C4;
+    background: rgba(217, 217, 217, 0.16);
+}
+.form-item-4{
+    display: flex;
+    align-items: center;
+}
+button[type="submit"],
+button[type="reset"]{
+background-color: var(--primary-color);
+font-size: 1.3vw;
+text-transform: capitalize;
+text-align: center;
+color: #ffff;
+padding: 8px 10px;
+margin: 0 60px 0 0;
+outline: none;
+border: none;
+border-radius: 5px;
+}
+
+/* utility Calsses */
+.text-yellow {
+    color: #FBFB24;
+}
+
+.text-white {
+    color: #ffff;
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+.disabled-section {
+    pointer-events: none; /* Disables all mouse events (click, hover, etc.) */
+    opacity: 0.5; /* Optional: visually indicate that the section is disabled */
+}

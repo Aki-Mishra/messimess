@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin login</title>
+    <link rel="stylesheet" href="./css//style.css">
+    <style>
+        :root {
+            --basic: "Basic", sans-serif;
+            --roboto: "Roboto", sans-serif;
+            --Krub: "Krub", sans-serif;
+            --Krub-style: italic;
+            --Aver: "Averia Libre", system-ui --Krub:"Krub", sans-serif;
+            --Krub-style: italic;
+            --Aver: "Averia Libre", system-ui;
+            --primary-color: rgb(44, 120, 115);
+            --secondary-color: #004445;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: var(--secondary-color);
+            flex-direction: column;
+        }
+
+        /*  form Section */
+        .form-heading {
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+            font-family: var(--roboto);
+            color: #fff;
+            text-align: center;
+
+        }
+
+        .form {
+            background-color: #d9d9d91a;
+            width: 31vw;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            border-radius: 20px;
+            flex-direction: column;
+
+        }
+
+        .input-field {
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+
+        .input-field img,
+        .input-field svg {
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 2px;
+        }
+
+        .input-field input, input:-webkit-autofill {
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            left: 0;
+            padding: 10px 0 6px 30px;
+            outline: none;
+            font-size: 1.2rem;
+            z-index: -5;
+            border: none;
+            position: relative;
+            background: transparent;
+            z-index: 9;
+            border-bottom: 2px solid #80CBC4;
+            font-family: var(--roboto);
+            font-weight: 500;
+            transition: all 0.2s;
+            caret-color: white;
+            color: white;
+        }
+
+        /* Target autofilled input fields */
+        .input-field input:-webkit-autofill {
+            background-color: transparent
+                /* Change text color if needed */
+        }
+
+        /* Firefox-specific styling */
+        .input-field input:-moz-autofill {
+            background-color: transparent !important;
+            /* Change this color to your preferred background color */
+            /* Change text color if needed */
+        }
+
+        /* Standard styling */
+        .input-field input:autofill {
+            background-color: transparent !important ;
+            /* Change text color if needed */
+        }
+      
+
+
+
+        .label-text {
+            font-size: 1.2rem;
+            position: absolute;
+            left: 30px;
+            margin: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: var(--basic) !important;
+            color: #fff;
+            transition: all 0.2s;
+            text-transform: capitalize;
+
+        }
+
+        .input-field input:focus {
+            border-bottom: 2px solid #00897B;
+        }
+
+        .input-field input:focus+.label-text,
+        .input-field input:not(:placeholder-shown)+.label-text {
+            transform: translate(-5px, -33px) scale(0.7);
+            left: 22px;
+            margin: 0;
+            color: #A7C4C2 !important;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            outline: none;
+            font-size: 1.3rem;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 20px;
+            position: relative;
+            box-sizing: border-box;
+
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="login-account-form-section">
+        <div class="form-section">
+            <div class="logo">
+                <img class="user-icon-colored" src="./images//meal-prefrences/icons/secondary-color-user-icon.png"
+                    alt="">
+            </div>
+            <p class="form-heading">Admin login</p>
+            <form action="" class="form">
+                <div class="input-field">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <g clip-path="url(#clip0_362_33)">
+                            <path
+                                d="M21.257 17.0278C20.1411 15.8187 18.7869 14.8539 17.2798 14.194C15.7727 13.534 14.1453 13.1934 12.5 13.1934C10.8547 13.1934 9.2273 13.534 7.72019 14.194C6.21307 14.8539 4.85893 15.8187 3.74306 17.0278C3.57022 17.2179 3.47376 17.4653 3.47223 17.7222V21.8889C3.47588 22.1627 3.58724 22.4241 3.78219 22.6165C3.97715 22.8088 4.24002 22.9167 4.5139 22.9167H20.4861C20.7624 22.9167 21.0273 22.8069 21.2227 22.6116C21.418 22.4162 21.5278 22.1513 21.5278 21.875V17.7083C21.5229 17.4562 21.4266 17.2144 21.257 17.0278Z"
+                                fill="#F8F8F8" />
+                            <path
+                                d="M12.5 11.8057C15.1847 11.8057 17.3611 9.62932 17.3611 6.94461C17.3611 4.25989 15.1847 2.0835 12.5 2.0835C9.81528 2.0835 7.63889 4.25989 7.63889 6.94461C7.63889 9.62932 9.81528 11.8057 12.5 11.8057Z"
+                                fill="#F8F8F8" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_362_33">
+                                <rect width="25" height="25" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <input placeholder=" " type="text" name="" id="user-name">
+                    <p class="label-text">Name</p>
+                </div>
+                <div class="input-field">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-input-field" width="25" height="25"
+                        viewBox="0 0 25 25" fill="none">
+                        <path
+                            d="M12.5 17.7082C13.0525 17.7082 13.5824 17.4887 13.9731 17.098C14.3638 16.7073 14.5833 16.1774 14.5833 15.6248C14.5833 15.0723 14.3638 14.5424 13.9731 14.1517C13.5824 13.761 13.0525 13.5415 12.5 13.5415C11.9475 13.5415 11.4176 13.761 11.0269 14.1517C10.6361 14.5424 10.4167 15.0723 10.4167 15.6248C10.4167 16.1774 10.6361 16.7073 11.0269 17.098C11.4176 17.4887 11.9475 17.7082 12.5 17.7082ZM18.75 8.33317C19.3025 8.33317 19.8324 8.55266 20.2231 8.94337C20.6138 9.33407 20.8333 9.86397 20.8333 10.4165V20.8332C20.8333 21.3857 20.6138 21.9156 20.2231 22.3063C19.8324 22.697 19.3025 22.9165 18.75 22.9165H6.24999C5.69746 22.9165 5.16755 22.697 4.77685 22.3063C4.38615 21.9156 4.16666 21.3857 4.16666 20.8332V10.4165C4.16666 9.86397 4.38615 9.33407 4.77685 8.94337C5.16755 8.55266 5.69746 8.33317 6.24999 8.33317H7.29166V6.24984C7.29166 4.8685 7.84039 3.54374 8.81714 2.56699C9.79389 1.59024 11.1187 1.0415 12.5 1.0415C13.184 1.0415 13.8612 1.17622 14.4931 1.43796C15.125 1.69971 15.6992 2.08335 16.1828 2.56699C16.6665 3.05063 17.0501 3.62479 17.3119 4.25669C17.5736 4.8886 17.7083 5.56587 17.7083 6.24984V8.33317H18.75ZM12.5 3.12484C11.6712 3.12484 10.8763 3.45408 10.2903 4.04013C9.70423 4.62618 9.37499 5.42104 9.37499 6.24984V8.33317H15.625V6.24984C15.625 5.42104 15.2957 4.62618 14.7097 4.04013C14.1236 3.45408 13.3288 3.12484 12.5 3.12484Z"
+                            fill="#F8F8F8" />
+                    </svg>
+                    <input placeholder=" " type="password" name="" id="password">
+                    <p class="label-text">password</p>
+                </div>
+
+                <button class="submit-btn"> Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+<script type="module" src="./scripts/adminLogin.js"></script>
+</html>

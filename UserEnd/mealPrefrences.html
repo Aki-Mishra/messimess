@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Prefrences</title>  
+    <link rel="stylesheet" href="./css/toggleBtn.css">
+    <link rel="stylesheet" href="./css/mealPrefrences.css">
+</head>
+
+<body>
+    <div class="meal-prefrences">
+        <p class="text-yellow heading-meal-prefrences">Meal Prefrences</h2>
+        <p class="text-white question">What you'll be eating: </p>
+        <div class="menu-items">
+            <span class="item text-yellow foodItem1" >Sahi paneer</span>
+            <span class="item text-yellow foodItem2" >Massor Dal</span>
+            <span class="item text-yellow">Chapti</span>
+            <span class="item text-yellow">Rice</span>
+        </div>
+        <form action="" class="form">
+            <div class="form-item food-item-1">
+                <p>Will you be eating your next meal</p>
+                <div class="toggle-btn active" id="next-meal-toggle">
+                    <span class="yes ">Yes</span>
+                    <i class="indicator"></i>
+                    <span class="no invisible">No</span>
+                </div>
+            </div>
+            <div class="form-item form-item-2">
+                <div>
+                    <p>Are you sick</p>
+                    <div class="toggle-btn unactive " id="are-u-sick-toggle-btn">
+                        <span class="yes invisible ">Yes</span>
+                        <i class="indicator"></i>
+                        <span class="no ">No</span>
+                    </div>
+                </div>
+
+                <div class="dish-sec" >
+                    <p class="foodItem1">Sahi paneer</p>
+                    <div class="toggle-btn unactive"  id="foodItem1">
+                        <span class="yes invisible ">Yes</span>
+                        <i class="indicator"></i>
+                        <span class="no ">No</span>
+                    </div>
+                </div>
+                <div class="dish-sec">
+                    <p class="foodItem2" >Masoor Dal</p>
+                    <div class="toggle-btn unactive" id="foodItem2">
+                        <span class="yes invisible ">Yes</span>
+                        <i class="indicator"></i>
+                        <span class="no ">No</span>
+                    </div>
+                </div>
+                <div class="dish-sec">
+                    <p>Rice</p>
+                    <div class="toggle-btn unactive" id="foodItem3">
+                        <span class="yes invisible " >Yes</span>
+                        <i class="indicator"></i>
+                        <span class="no ">No</span>
+                    </div>
+                </div>
+                <div class="dish-sec">
+                    <p>Chapti</p>
+                    <input type="number"   placeholder="0" id="chapati-input" value="0">
+                </div>
+            </div>
+            <div class="form-item form-item-3">
+                <span>Orders</span>
+                <span id="small-text">&#40;<i>&#42;</i>You have to pay&#41;</span>
+                <div class="orders"></div>
+            </div>
+            <div class="form-item form-item-4">
+                <button type="submit" id="scheduleSubmitBtn">submit</button>
+                <button type="reset">reset &#8634;</button>
+            </div>
+
+        </form>
+    </div>
+    
+    <script src="./scripts/toggleBtn.js"></script>
+    <script src="./scripts/mealPrefrences.js"></script>
+</body>
+
+</html>

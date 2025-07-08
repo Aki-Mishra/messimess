@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        *,
+        ::after,
+        ::before {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --basic: "Basic", sans-serif;
+            --roboto: "Roboto", sans-serif;
+            --Krub: "Krub", sans-serif;
+            --Krub-style: italic;
+            --Aver: "Averia Libre", system-ui --Krub:"Krub", sans-serif;
+            --Krub-style: italic;
+            --Aver: "Averia Libre", system-ui;
+            --primary-color: rgb(44, 120, 115);
+            --secondary-color: #004445;
+            --breakfast-color: #F28482;
+            --lunch-color: #F6BD60;
+            --snack-color: #4FD6B5;
+            --dinner-color: #1DADD7;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--secondary-color) !important;
+        }
+
+        .graph {
+            background-color: var(--primary-color);
+            padding: 5px 15px;
+            width: 75vw;
+            height: 450px;
+            display: flex;
+        }
+
+        .linesAndBars {
+            width: 80%;
+            position: relative;
+            height: 90%;
+        }
+
+        .lines {
+            width: calc(100% + 30px);
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .lines>div {
+            height: 30px;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: end;
+        }
+
+        .lines>div>span {
+            position: relative;
+            color: #fff;
+            top: 0;
+            font-family: var(--roboto);
+            display: flex;
+            justify-content: end;
+            font-size: 14px;
+            width: 30px;
+            top: 30%;
+            margin-right: 10px;
+        }
+
+        .lines>div>div {
+            display: flex;
+            width: calc(100% + 30px);
+            flex-direction: row;
+            height: 1px;
+            border: transparent;
+            background-color: #fff;
+        }
+
+        /* for bars */
+        .bars {
+            position: absolute;
+            top: 0;
+            display: flex;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            padding-top: 30px;
+            margin-left: 40px;
+            width: 100%;
+        }
+
+        .barAndItsName {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .barBox {
+            height: calc(30px *8);
+            display: flex;
+            align-items: end;
+        }
+
+        .bar {
+            height: 100px;
+            width: 40px;
+            background-color: red;
+
+        }
+
+        .itemName {
+            display: flex;
+            flex-direction: column;
+            padding-top: 25px;
+
+
+        }
+
+        .itemName p {
+            color: yellow;
+            font-weight: 500;
+            font-family: var(--roboto);
+            font-size: 14px;
+            transform: rotate(315deg);
+            position: relative;
+            right: 18px;
+        }
+
+        /* for labelNames */
+        .labelIndicators {
+            width: 20%;
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+            padding: 20px  0 0 50px;
+        }
+
+        .labelIndicators>div {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-gap: 10px;
+            margin: 5px 0;
+        }
+
+        .labelIndicators>div>.labelBox {
+            height: 25px;
+            width: 25px;
+        }
+
+        .labelIndicators>div>p {
+            font-size: 14px;
+            font-family: var(--roboto);
+            color: #fff;
+        }
+
+        #breakfast {
+            background-color: var(--breakfast-color);
+        }
+
+        #lunch {
+            background-color: var(--lunch-color);
+        }
+
+        #snacks {
+            background-color: var(--snack-color);
+        }
+
+        #dinner {
+            background-color: var(--dinner-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="graph">
+        <div class="linesAndBars">
+            <div class="lines">
+
+                <div class="line0">
+                    <span>0</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line1">
+                    <span>100</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line2">
+                    <span>200</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line3">
+                    <span>300</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line4">
+                    <span>400</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line5">
+                    <span>500</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line6">
+                    <span>600</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line7">
+                    <span>700</span>
+                    <div class="line"></div>
+                </div>
+                <div class="line8">
+                    <span>800</span>
+                    <div class="line"></div>
+                </div>
+
+            </div>
+            <div class="bars">
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+                        <p>Chapati</p>
+                    </div>
+
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+                </div>
+                <div class="barAndItsName">
+                    <div class="barBox">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="itemName">
+
+                        <p>Chapati</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="labelIndicators">
+            <div class="breakfastLabelContainr">
+                <div class="labelBox" id="breakfast">
+
+                </div>
+                <p id="breakfastText">Breakfast</p>
+            </div>
+            <div class="lunchLabelContainr">
+                <div class="labelBox" id="lunch">
+
+                </div>
+                <p id="lunchText">Lunch</p>
+            </div>
+            <div class="snacksLabelContainr">
+                <div class="labelBox" id="snacks">
+
+                </div>
+                <p id="snacksText">Snacks</p>
+            </div>
+            <div class="dinnerLabelContainr">
+                <div class="labelBox" id="dinner">
+
+                </div>
+                <p id="dinnerText">Dinner</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
